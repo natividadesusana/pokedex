@@ -3,9 +3,7 @@ const path = require("path");
 module.exports = {
   mode: process.env.NODE_ENV,
   devtool:
-    process.env.NODE_ENV === "development"
-      ? "eval-cheap-module-source-map"
-      : "source-map",
+    process.env.NODE_ENV === "development" && "eval-cheap-module-source-map" , 
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "public"),
